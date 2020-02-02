@@ -1,4 +1,3 @@
-[![Actions Status](https://github.com/damoti/django-dart-webdev/workflows/Continuous%20Integration/badge.svg)](https://github.com/damoti/django-dart-webdev/actions)
-# Django Dart webdev
+# Django Dart Webdev [![CI](https://github.com/damoti/django-dart-webdev/workflows/tests/badge.svg)](https://github.com/damoti/django-dart-webdev/actions)
 
 Use Dart `webdev` with Django.
