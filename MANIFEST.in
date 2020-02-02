@@ -1,0 +1,4 @@
+exclude .gitignore
+exclude Makefile
+prune .github
+prune tests

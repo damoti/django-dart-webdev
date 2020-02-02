@@ -1,0 +1,12 @@
+django_dart_webdev.egg-info/
+django_dart_webdev/__init__.py
+__pycache__/
+.idea
+.coverage
+.tox
+dist
+build
+
+tests/manage.py
+tests/dart_test_app
+tests/django_test_app

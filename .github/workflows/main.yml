@@ -1,0 +1,23 @@
+name: Continuous Integration
+on: [push]
+jobs:
+  test:
+    name: python ${{ matrix.python }} django ${{ matrix.django }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: [3.7, 3.8]
+        django: [2, 3]
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: DanTup/gh-actions/setup-dart@master
+        with:
+          channel: dev
+      - run: echo "::add-path::$HOME/.pub-cache/bin"
+      - name: Install Testing Tools
+        run: make install-tools
+      - name: Run Tests
+        run: tox -e py-django${{ matrix.django }}
